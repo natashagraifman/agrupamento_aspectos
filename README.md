@@ -1,5 +1,6 @@
 
 Script em python recebe um arquivo csv contendo uma lista de aspectos, e devolve agrupamentos de aspectos com mesmo significado, ou significados muito semelhantes.
+A saída do algoritmo, com os respectivos grupos formados encontra-se no arquivo 'saida.txt'
 
 ## Uso
 
@@ -14,6 +15,6 @@ Rode o programa <br>
 
 ## Bibliotecas
 ### Wordnet
-O WordNet é um leitor de corpus da biblioteca NLTK que possui banco de dados lexical de inglês.
-Substantivos, verbos, adjetivos e advérbios são agrupados em conjuntos de sinônimos cognitivos (synsets), cada um expressando um conceito distinto. Os sinsets são interligados por meio de relações conceitual-semânticas e lexicais. 
-Foram utilizados neste projeto seus métodos para encontrar os synsets e a o método wup_similaridade, que calcula o grau de similaridade de duas palavras variando de 0 à 1.
+O WordNet é um leitor de corpus da biblioteca NLTK que possui banco de dados lexical de inglês. <br>
+Substantivos, verbos, adjetivos e advérbios são agrupados em conjuntos de sinônimos cognitivos (synsets), cada um expressando um conceito distinto. Os synsets são interligados por meio de relações conceitual-semânticas e lexicais. <br>
+Foram utilizados neste projeto seus métodos para encontrar os synsets e a o método wup_similarity, que calcula o grau de similaridade de duas palavras, variando de 0 à 1.
