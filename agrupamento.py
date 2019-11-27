@@ -10,7 +10,7 @@ with open('laptop_filtered_aspect_sample.csv') as ficheiro:
     leitor = csv.reader(ficheiro)
     aspectos = [linha[0] for linha in leitor]
 
-# função que recebe como entrada duas strings e retorna verdadeiro se as duas são sinonimos (de acordo com a classificação de lemmas do wordnet), ou se possuem similaridade acima de 90%)
+# função que recebe como entrada duas strings e retorna verdadeiro se as duas são sinonimos (de acordo com a classificação de synsets do wordnet), ou se possuem similaridade acima de 90%)
 def similares(s1,s2):
     resultado = False
     for syn1 in wn.synsets(s1):
