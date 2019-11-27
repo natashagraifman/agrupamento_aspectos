@@ -11,8 +11,6 @@ with open('laptop_filtered_aspect_sample.csv') as ficheiro:
     leitor = csv.reader(ficheiro)
     aspectos = [linha[0] for linha in leitor]
 
-lista = ['computer','laptop','price','calculator','screen','display','cost','estimator','dog','notebook']
-
 # função que recebe como entrada duas strings e retorna verdadeiro se as duas são sinonimos (de acordo com a classificação de lemmas do wordnet), ou se possuem similaridade acima de 90%)
 def similares(s1,s2):
     resultado = False
@@ -39,27 +37,5 @@ def agrupamento(lista):
             if (sinonimos not in grupos):
                 grupos.append(sinonimos)
                 print(sinonimos)
-                print(len(lista))
-    return grupos
-'''
-for syn in wn.synsets("needs"):
-    print(syn, syn.definition())
-    #for l in syn.lemmas():
-        #print(syn)
-'''
 
-for syn in wn.synsets('dog'):
-    for l in syn.lemmas():
-        print(l.name())
-
-def similaridade(s1,s2):
-    for syn1 in wn.synsets(s1):
-        for syn2 in wn.synsets(s2):
-            print(syn1, syn1.definition())
-            print(syn2, syn2.definition())
-            print(wn.wup_similarity(syn1,syn2))
-
-#similaridade('computer','clients')
-
-#print(similares('laptop','notebook'))
-#print(agrupamento(aspectos))
+print(agrupamento(aspectos))
