@@ -1,5 +1,6 @@
 
 Script em python recebe um arquivo csv contendo uma lista de aspectos, e devolve agrupamentos de aspectos com mesmo significado, ou significados muito semelhantes.
+A saída do algoritmo, com os respectivos grupos formados encontra-se no arquivo 'saida.txt'
 
 ## Uso
 
