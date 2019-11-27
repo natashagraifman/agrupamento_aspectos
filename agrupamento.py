@@ -1,7 +1,7 @@
 
 import nltk
 import csv
-#nltk.download('wordnet')
+nltk.download('wordnet')
 from nltk.corpus import wordnet as wn
 
 aspectos = []
@@ -38,4 +38,4 @@ def agrupamento(lista):
                 grupos.append(sinonimos)
                 print(sinonimos)
 
-print(agrupamento(aspectos))
+agrupamento(aspectos)
