@@ -1,4 +1,3 @@
-
 import nltk
 import csv
 nltk.download('wordnet')
@@ -22,9 +21,22 @@ def similares(s1,s2):
                     return resultado
     return resultado
 
+# função que escreve no arquivo
+def adiciona_arquivo(sinonimos):
+    string_sinonimos = ' '.join([str(item) for item in sinonimos])
+
+    arquivo = open('saida.txt', 'r') # Abra o arquivo (leitura)
+    conteudo = arquivo.readlines()
+    conteudo.append('\n Grupo: ')
+    conteudo.append(string_sinonimos)   # insira seu conteúdo
+
+    arquivo = open('saida.txt', 'w') # Abre novamente o arquivo (escrita)
+    arquivo.writelines(conteudo)   # escreva o conteúdo criado anteriormente nele.
+
+    arquivo.close()
+
 # função que recebe como entrada uma lista de strings, e agrupa os aspectos que são semelhantes, retornando todos os grupos da lista
 def agrupamento(lista):
-    grupos=[]
     if lista:
         for item in lista:
             sinonimos=[]
@@ -34,8 +46,8 @@ def agrupamento(lista):
                 elif (similares(item, comparando)):
                     sinonimos.append(comparando)
                     lista.remove(comparando)
-            if (sinonimos not in grupos):
-                grupos.append(sinonimos)
+            if(sinonimos):
+                adiciona_arquivo(sinonimos)
                 print(sinonimos)
 
 agrupamento(aspectos)
